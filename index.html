@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>السيرة الذاتية | دكتور زيد عبدالله</title>
+    <title>السيرة الذاتية | دكتور هشام حداد</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         :root {
             --bg-color: #0d0d0d; 
             --card-bg: #161616; 
-            --accent-color: #d4af37;
+            --accent-color: #d4af37; /* لون ذهبي */
             --text-main: #ffffff;
             --text-secondary: #b0b0b0;
             --border-color: #2a2a2a;
@@ -51,7 +52,7 @@
         }
 
         h1 { margin: 10px 0; color: var(--accent-color); font-size: 1.8rem; font-weight: 600; }
-        .subtitle { font-size: 1rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto; padding: 0 10px; }
+        .subtitle { font-size: 1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; padding: 0 10px; }
         
         .location-tag { 
             font-size: 0.8rem; background: #222; color: #fff;
@@ -158,69 +159,67 @@
     <button id="lang-btn" onclick="toggleLanguage()">English</button>
 
     <header>
-        <img src="img.png" 
-             alt="Dr. Zaid Abdullah" class="profile-img">
+        <img src="img.jpeg" 
+             alt="Dr. Hisham Haddad" class="profile-img">
         
-        <h1 id="txt-name">دكتور زيد عبدالله</h1>
-        <p class="subtitle" id="txt-role">طبيب استشاري أمراض الأطفال / أمراض كلى الأطفال</p>
-        <div class="location-tag" id="txt-curr-loc">📍 حالياً: المستشفى الحكومي الكندي</div>
+        <h1 id="txt-name">الدكتور الاستشاري هشام حداد</h1>
+        <p class="subtitle" id="txt-role">دكتوراه بورد طب الأطفال وحديثي الولادة | تخصص دقيق أعصاب أطفال</p>
+        <div class="location-tag" id="txt-curr-loc">📍 حالياً: العيادة الاستشارية التخصصية</div>
     </header>
 
     <div class="container">
         
         <div class="stats-grid">
             <div class="stat-card">
-                <span class="stat-num" dir="ltr">+2500</span>
-                <span class="stat-label" id="lbl-stat1">حالة تم علاجها</span>
+                <span class="stat-num" dir="ltr">+15</span>
+                <span class="stat-label" id="lbl-stat1">سنة خبرة</span>
             </div>
             <div class="stat-card">
-                <span class="stat-num" dir="ltr">15</span>
-                <span class="stat-label" id="lbl-stat2">عاماً من الخبرة</span>
+                <span class="stat-num" dir="ltr">Ph.D</span>
+                <span class="stat-label" id="lbl-stat2">دكتوراه وبورد</span>
             </div>
             <div class="stat-card">
-                <span class="stat-num" dir="ltr">🇨🇦</span>
-                <span class="stat-label" id="lbl-stat3">الزمالة الكندية</span>
+                <span class="stat-num" dir="ltr">🇪🇺</span>
+                <span class="stat-label" id="lbl-stat3">الزمالة الأوروبية</span>
             </div>
         </div>
 
         <section>
             <h2 class="section-title"><i class="fas fa-user-tie"></i> <span id="title-about">النبذة المهنية</span></h2>
             <p id="txt-about">
-                استشاري متخصص في طب الأطفال وأمراض كلى الأطفال، حاصل على الزمالة الكندية وبورد التخصص الدقيق. أركز في ممارستي على تشخيص وعلاج اضطرابات الكلى المعقدة لدى الأطفال وفق أعلى المعايير العالمية.
+                طبيب استشاري حاصل على الدكتوراه والبورد في طب الأطفال وحديثي الولادة. متخصص دقيق في الأمراض العصبية عند الأطفال. عضو وزميل في الجمعية الأوروبية لطب أعصاب الأطفال (EPNS)، ذو خبرة واسعة في تشخيص وعلاج الاضطرابات العصبية المعقدة.
             </p>
         </section>
 
         <section>
-            <h2 class="section-title"><i class="fas fa-microscope"></i> <span id="title-services">مجالات التخصص</span></h2>
+            <h2 class="section-title"><i class="fas fa-brain"></i> <span id="title-services">مجالات التخصص</span></h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3 id="srv1-title">أمراض كلى الأطفال</h3>
-                    <p id="srv1-desc">علاج حالات الفشل الكلوي المزمن، المتلازمة الكلوية، واضطرابات الأملاح والمعادن.</p>
+                    <h3 id="srv1-title">طب أعصاب الأطفال</h3>
+                    <p id="srv1-desc">تشخيص وعلاج الصرع والتشنجات، الصداع المزمن، الشلل الدماغي، واضطرابات التوحد والنمو.</p>
                 </div>
                 <div class="service-card">
-                    <h3 id="srv2-title">الغسيل الكلوي</h3>
-                    <p id="srv2-desc">الإشراف الطبي على برامج الديلزة الدموية والبريتونية المخصصة للأطفال.</p>
+                    <h3 id="srv2-title">حديثي الولادة والخدج</h3>
+                    <p id="srv2-desc">العناية المركزة لحديثي الولادة، متابعة النمو والتطور الحركي والذهني للأطفال والرضع.</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> <span id="title-exp">المسيرة المهنية</span></h2>
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> <span id="title-exp">الخبرات والمؤهلات</span></h2>
             <div class="exp-item">
-                <div class="exp-title" id="job1-title">استشاري أمراض كلى الأطفال</div>
-                <span class="exp-meta" id="job1-meta">2019 - الحاضر | المستشفى الحكومي الكندي</span>
-            </div>
-            <div class="exp-item">
-                <div class="exp-title" id="job2-title">زميل إكلينيكي</div>
-                <span class="exp-meta" id="job2-meta">2015 - 2019 | جامعة تورنتو - كندا</span>
+                <div class="exp-title" id="job1-title">استشاري أعصاب أطفال</div>
+                <span class="exp-meta" id="job1-meta">حاصل على البورد والدكتوراه</span>
+                <p class="exp-desc" id="job1-desc">تشخيص دقيق للحالات العصبية وعلاج أمراض الأطفال المستعصية.</p>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title"><i class="fas fa-award"></i> <span id="title-edu">الاعتمادات</span></h2>
+            <h2 class="section-title"><i class="fas fa-certificate"></i> <span id="title-edu">الاعتمادات والعضويات</span></h2>
             <ul id="list-edu">
-                <li>زميل الكلية الملكية للأطباء والجراحين بكندا (FRCPC).</li>
-                <li>عضو الجمعية الدولية لأمراض كلى الأطفال (IPNA).</li>
+                <li>زميل الجمعية الأوروبية لطب أعصاب الأطفال (EPNS).</li>
+                <li>بورد ودكتوراه في طب الأطفال وحديثي الولادة.</li>
+                <li>عضو الجمعيات الطبية المتخصصة في طب الأعصاب.</li>
             </ul>
         </section>
 
@@ -235,15 +234,15 @@
     </div>
 
     <footer>
-        <a href="https://goo.gl/maps/XYZ" target="_blank" class="footer-btn">
+        <a href="https://www.google.com/maps/place/%D8%AF%D9%83%D8%AA%D9%88%D8%B1+%D9%87%D8%B4%D8%A7%D9%85+%D8%A7%D9%84%D8%AD%D8%AF%D8%A7%D8%AF,+Thawra+St,+Baghdad,+Baghdad+Governorate%E2%80%AD/data=!4m2!3m1!1s0x155783efbcb95db5:0x1198f413bb40e7de?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI1LjQ5LjYYACDXggMqdiw5NDI2NzcyNyw5NDI3NTQwNyw5NDI5MjE5NSw5NDI5OTUzMiw5NDI4MDU3Niw5NDIwNzM5NCw5NDIwNzUwNiw5NDIwODUwNiw5NDIxODY1Myw5NDIyOTgzOSw5NDI3NTE2OCw5NDI3OTYxOSwxMDA3OTE0ODNCAklR&skid=3c18e6ca-9bca-4605-90c8-48faa92851a1&g_st=aw" target="_blank" class="footer-btn">
             <i class="fas fa-map-marker-alt"></i>
             <span id="btn-loc">الموقع</span>
         </a>
-        <a href="tel:+966500000000" class="footer-btn">
+        <a href="tel:+9647706440699" class="footer-btn">
             <i class="fas fa-phone-alt"></i>
             <span id="btn-call">اتصال</span>
         </a>
-        <a href="mailto:dr.zaid@hospital.ca" class="footer-btn">
+        <a href="heshamz813@gmail.com" class="footer-btn">
             <i class="fas fa-envelope"></i>
             <span id="btn-email">بريد</span>
         </a>
@@ -257,39 +256,37 @@
         const translations = {
             ar: {
                 langBtn: "English",
-                name: "دكتور زيد عبدالله",
-                role: "استشاري أمراض كلى الأطفال",
-                currLoc: "📍 حالياً: المستشفى الحكومي الكندي",
-                s1: "حالة تم علاجها", s2: "عاماً من الخبرة", s3: "الزمالة الكندية",
-                tAbout: "النبذة المهنية", tServices: "مجالات التخصص", tExp: "المسيرة المهنية", tEdu: "الاعتمادات",
-                txtAbout: "استشاري متخصص في طب الأطفال وأمراض كلى الأطفال، حاصل على الزمالة الكندية وبورد التخصص الدقيق. أركز في ممارستي على تشخيص وعلاج اضطرابات الكلى المعقدة لدى الأطفال.",
-                srv1t: "أمراض كلى الأطفال", srv1d: "علاج حالات الفشل الكلوي المزمن، المتلازمة الكلوية، واضطرابات الأملاح.",
-                srv2t: "الغسيل الكلوي", srv2d: "الإشراف الطبي على برامج الديلزة الدموية والبريتونية المخصصة للأطفال.",
-                j1t: "استشاري أمراض كلى الأطفال", j1m: "2019 - الحاضر | المستشفى الحكومي الكندي",
-                j2t: "زميل إكلينيكي", j2m: "2015 - 2019 | جامعة تورنتو - كندا",
-                eduList: "<li>زميل الكلية الملكية للأطباء والجراحين بكندا (FRCPC).</li><li>عضو الجمعية الدولية لأمراض كلى الأطفال (IPNA).</li>",
+                name: "الدكتور الاستشاري هشام حداد",
+                role: "دكتوراه بورد طب الأطفال | تخصص دقيق أعصاب أطفال",
+                currLoc: "📍 حالياً: العيادة الاستشارية التخصصية",
+                s1: "سنة خبرة", s2: "دكتوراه وبورد", s3: "الزمالة الأوروبية",
+                tAbout: "النبذة المهنية", tServices: "مجالات التخصص", tExp: "الخبرات والمؤهلات", tEdu: "الاعتمادات",
+                txtAbout: "طبيب استشاري حاصل على الدكتوراه والبورد في طب الأطفال وحديثي الولادة. متخصص دقيق في الأمراض العصبية عند الأطفال. عضو وزميل في الجمعية الأوروبية لطب أعصاب الأطفال (EPNS).",
+                srv1t: "طب أعصاب الأطفال", srv1d: "تشخيص وعلاج الصرع والتشنجات، الصداع المزمن، الشلل الدماغي، واضطرابات التوحد والنمو.",
+                srv2t: "حديثي الولادة والخدج", srv2d: "العناية المركزة لحديثي الولادة، متابعة النمو والتطور الحركي والذهني للأطفال والرضع.",
+                j1t: "استشاري أعصاب أطفال", j1m: "حاصل على البورد والدكتوراه", j1d: "تشخيص دقيق للحالات العصبية وعلاج أمراض الأطفال المستعصية.",
+                eduList: "<li>زميل الجمعية الأوروبية لطب أعصاب الأطفال (EPNS).</li><li>بورد ودكتوراه في طب الأطفال وحديثي الولادة.</li><li>عضو الجمعيات الطبية المتخصصة في طب الأعصاب.</li>",
                 bLoc: "الموقع", bCall: "اتصال", bEmail: "بريد", bHours: "المواعيد",
                 mTitle: "جدول العيادة", mClose: "إغلاق",
                 days: ["السبت", "الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة"],
-                time: "9ص - 4م", closed: "مغلق"
+                time: "4م - 9م", closed: "مغلق"
             },
             en: {
                 langBtn: "عربي",
-                name: "Dr. Zaid Abdullah",
-                role: "Consultant Pediatric Nephrologist",
-                currLoc: "📍 Currently: Canadian Gov. Hospital",
-                s1: "Cases Treated", s2: "Years Experience", s3: "Canadian Fellow",
-                tAbout: "Professional Summary", tServices: "Specialties", tExp: "Career Journey", tEdu: "Accreditations",
-                txtAbout: "Consultant Pediatrician and Pediatric Nephrologist, Canadian Fellowship holder. Specializing in the diagnosis and treatment of complex renal disorders in children.",
-                srv1t: "Pediatric Nephrology", srv1d: "Management of chronic kidney failure, nephrotic syndrome, and electrolyte disorders.",
-                srv2t: "Pediatric Dialysis", srv2d: "Medical supervision of hemodialysis and peritoneal dialysis for kids.",
-                j1t: "Consultant Ped. Nephrologist", j1m: "2019 - Present | Canadian Gov. Hospital",
-                j2t: "Clinical Fellow", j2m: "2015 - 2019 | University of Toronto",
-                eduList: "<li>Fellow of the Royal College of Physicians of Canada (FRCPC).</li><li>Member of Int. Pediatric Nephrology Association (IPNA).</li>",
+                name: "Dr. Hisham Haddad",
+                role: "Consultant Pediatric Neurologist | Ph.D & Board",
+                currLoc: "📍 Currently: Specialized Consultant Clinic",
+                s1: "Years Exp.", s2: "Ph.D & Board", s3: "European Fellow",
+                tAbout: "Professional Summary", tServices: "Specialties", tExp: "Qualifications", tEdu: "Accreditations",
+                txtAbout: "Consultant Physician holding a Doctorate and Board in Pediatrics & Neonatology. Sub-specialty in Pediatric Neurology. Fellow of the European Paediatric Neurology Society (EPNS).",
+                srv1t: "Pediatric Neurology", srv1d: "Diagnosis and treatment of epilepsy, seizures, migraines, cerebral palsy, and neurodevelopmental disorders.",
+                srv2t: "Neonatology", srv2d: "Neonatal intensive care, monitoring of motor and mental development for infants and newborns.",
+                j1t: "Consultant Ped. Neurologist", j1m: "Board Certified & Ph.D Holder", j1d: "Expert diagnosis of neurological conditions and complex pediatric diseases.",
+                eduList: "<li>Fellow of the European Paediatric Neurology Society (EPNS).</li><li>Ph.D & Board in Pediatrics and Neonatology.</li><li>Member of specialized neurological associations.</li>",
                 bLoc: "Location", bCall: "Call", bEmail: "Email", bHours: "Schedule",
                 mTitle: "Clinic Schedule", mClose: "Close",
                 days: ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"],
-                time: "9AM - 4PM", closed: "Closed"
+                time: "4PM - 9PM", closed: "Closed"
             }
         };
 
@@ -314,8 +311,7 @@
             document.getElementById('txt-about').innerText = d.txtAbout;
             document.getElementById('srv1-title').innerText = d.srv1t; document.getElementById('srv1-desc').innerText = d.srv1d;
             document.getElementById('srv2-title').innerText = d.srv2t; document.getElementById('srv2-desc').innerText = d.srv2d;
-            document.getElementById('job1-title').innerText = d.j1t; document.getElementById('job1-meta').innerText = d.j1m;
-            document.getElementById('job2-title').innerText = d.j2t; document.getElementById('job2-meta').innerText = d.j2m;
+            document.getElementById('job1-title').innerText = d.j1t; document.getElementById('job1-meta').innerText = d.j1m; document.getElementById('job1-desc').innerText = d.j1d;
             document.getElementById('list-edu').innerHTML = d.eduList;
             document.getElementById('btn-loc').innerText = d.bLoc;
             document.getElementById('btn-call').innerText = d.bCall;
