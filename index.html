@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>السيرة الذاتية | دكتور زيد عبدالله</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0d0d0d; 
+            --card-bg: #161616; 
+            --accent-color: #d4af37;
+            --text-main: #ffffff;
+            --text-secondary: #b0b0b0;
+            --border-color: #2a2a2a;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0; padding: 0; line-height: 1.6;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* زر اللغة - محسّن للجوال */
+        #lang-btn {
+            position: fixed; top: 15px; left: 15px;
+            background: var(--accent-color); color: #000;
+            border: none; padding: 6px 15px; border-radius: 20px;
+            cursor: pointer; font-weight: bold; z-index: 2000;
+            font-size: 0.85rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* الهيدر - متجاوب */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .profile-img {
+            width: 140px; height: 140px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+            object-fit: cover;
+            margin-bottom: 15px;
+            padding: 4px;
+        }
+
+        h1 { margin: 10px 0; color: var(--accent-color); font-size: 1.8rem; font-weight: 600; }
+        .subtitle { font-size: 1rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto; padding: 0 10px; }
+        
+        .location-tag { 
+            font-size: 0.8rem; background: #222; color: #fff;
+            padding: 5px 12px; border-radius: 4px; display: inline-block; margin-top: 15px;
+            border-inline-start: 3px solid var(--accent-color);
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 30px 15px 100px; }
+
+        /* الإحصائيات - ترتيب ذكي للجوال */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px; margin-bottom: 40px;
+        }
+        .stat-card {
+            background: var(--card-bg); padding: 20px 10px; border-radius: 8px;
+            text-align: center; border: 1px solid var(--border-color);
+        }
+        .stat-num { display: block; font-size: 1.8rem; font-weight: bold; color: var(--accent-color); }
+        .stat-label { font-size: 0.8rem; color: var(--text-secondary); letter-spacing: 0.5px; }
+
+        /* الأقسام */
+        section { margin-bottom: 40px; }
+        .section-title {
+            font-size: 1.3rem; color: #fff; margin-bottom: 20px;
+            display: flex; align-items: center; border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        .section-title i { color: var(--accent-color); margin-inline-end: 12px; font-size: 1.1rem; }
+
+        /* الخدمات - تظهر كبطاقات عمودية في الجوال */
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;
+        }
+        .service-card {
+            background: var(--card-bg); padding: 25px; border-radius: 8px;
+            border: 1px solid var(--border-color); border-top: 3px solid var(--accent-color);
+        }
+        .service-card h3 { color: var(--accent-color); margin-top: 0; font-size: 1.15rem; margin-bottom: 10px; }
+        .service-card p { font-size: 0.9rem; color: var(--text-secondary); margin: 0; line-height: 1.5; }
+
+        /* الخبرات */
+        .exp-item {
+            margin-bottom: 25px; padding-inline-start: 15px;
+            border-inline-start: 1px solid var(--accent-color);
+        }
+        .exp-title { font-size: 1.1rem; font-weight: bold; color: #fff; margin-bottom: 3px; }
+        .exp-meta { color: var(--accent-color); font-size: 0.85rem; margin-bottom: 8px; display: block; }
+        .exp-desc { color: var(--text-secondary); font-size: 0.9rem; }
+
+        /* قائمة العضويات */
+        #list-edu { padding-inline-start: 20px; margin: 0; font-size: 0.95rem; }
+        #list-edu li { margin-bottom: 10px; }
+
+        /* الفوتر - مخصص للمس باليد */
+        footer {
+            position: fixed; bottom: 0; width: 100%; left: 0;
+            background: rgba(17, 17, 17, 0.95); backdrop-filter: blur(10px);
+            border-top: 1px solid var(--accent-color);
+            padding: 10px 0; display: flex; justify-content: space-around;
+            z-index: 1000;
+        }
+        .footer-btn {
+            background: none; border: none; color: #fff;
+            text-align: center; cursor: pointer; flex: 1; text-decoration: none;
+            padding: 5px;
+        }
+        .footer-btn i { display: block; font-size: 1.2rem; color: var(--accent-color); margin-bottom: 4px; }
+        .footer-btn span { font-size: 0.75rem; white-space: nowrap; }
+
+        /* النافذة المنبثقة للجوال */
+        .modal {
+            display: none; position: fixed; z-index: 3000;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center; align-items: flex-end; /* تفتح من الأسفل في الجوال */
+        }
+        .modal-content {
+            background: var(--card-bg); padding: 30px 20px; border-radius: 15px 15px 0 0;
+            width: 100%; max-width: 500px; border: 1px solid var(--accent-color); text-align: center;
+            animation: slideUp 0.3s ease-out;
+        }
+        @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+        
+        table { width: 100%; margin-top: 15px; border-collapse: collapse; }
+        td { padding: 10px; border-bottom: 1px solid #222; color: var(--text-secondary); font-size: 0.9rem; }
+        
+        .close-modal {
+            margin-top: 20px; background: var(--accent-color); border: none;
+            padding: 12px; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1rem;
+        }
+
+        /* تعديلات الشاشات الصغيرة جداً */
+        @media (max-width: 400px) {
+            h1 { font-size: 1.5rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .profile-img { width: 120px; height: 120px; }
+        }
+    </style>
+</head>
+<body>
+
+    <button id="lang-btn" onclick="toggleLanguage()">English</button>
+
+    <header>
+        <img src="img.png" 
+             alt="Dr. Zaid Abdullah" class="profile-img">
+        
+        <h1 id="txt-name">دكتور زيد عبدالله</h1>
+        <p class="subtitle" id="txt-role">طبيب استشاري أمراض الأطفال / أمراض كلى الأطفال</p>
+        <div class="location-tag" id="txt-curr-loc">📍 حالياً: المستشفى الحكومي الكندي</div>
+    </header>
+
+    <div class="container">
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-num" dir="ltr">+2500</span>
+                <span class="stat-label" id="lbl-stat1">حالة تم علاجها</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num" dir="ltr">15</span>
+                <span class="stat-label" id="lbl-stat2">عاماً من الخبرة</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num" dir="ltr">🇨🇦</span>
+                <span class="stat-label" id="lbl-stat3">الزمالة الكندية</span>
+            </div>
+        </div>
+
+        <section>
+            <h2 class="section-title"><i class="fas fa-user-tie"></i> <span id="title-about">النبذة المهنية</span></h2>
+            <p id="txt-about">
+                استشاري متخصص في طب الأطفال وأمراض كلى الأطفال، حاصل على الزمالة الكندية وبورد التخصص الدقيق. أركز في ممارستي على تشخيص وعلاج اضطرابات الكلى المعقدة لدى الأطفال وفق أعلى المعايير العالمية.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title"><i class="fas fa-microscope"></i> <span id="title-services">مجالات التخصص</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 id="srv1-title">أمراض كلى الأطفال</h3>
+                    <p id="srv1-desc">علاج حالات الفشل الكلوي المزمن، المتلازمة الكلوية، واضطرابات الأملاح والمعادن.</p>
+                </div>
+                <div class="service-card">
+                    <h3 id="srv2-title">الغسيل الكلوي</h3>
+                    <p id="srv2-desc">الإشراف الطبي على برامج الديلزة الدموية والبريتونية المخصصة للأطفال.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> <span id="title-exp">المسيرة المهنية</span></h2>
+            <div class="exp-item">
+                <div class="exp-title" id="job1-title">استشاري أمراض كلى الأطفال</div>
+                <span class="exp-meta" id="job1-meta">2019 - الحاضر | المستشفى الحكومي الكندي</span>
+            </div>
+            <div class="exp-item">
+                <div class="exp-title" id="job2-title">زميل إكلينيكي</div>
+                <span class="exp-meta" id="job2-meta">2015 - 2019 | جامعة تورنتو - كندا</span>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title"><i class="fas fa-award"></i> <span id="title-edu">الاعتمادات</span></h2>
+            <ul id="list-edu">
+                <li>زميل الكلية الملكية للأطباء والجراحين بكندا (FRCPC).</li>
+                <li>عضو الجمعية الدولية لأمراض كلى الأطفال (IPNA).</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <div id="hoursModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">جدول العيادة</h3>
+            <table id="hours-table"></table>
+            <button class="close-modal" onclick="closeModal()" id="btn-close">إغلاق</button>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://goo.gl/maps/XYZ" target="_blank" class="footer-btn">
+            <i class="fas fa-map-marker-alt"></i>
+            <span id="btn-loc">الموقع</span>
+        </a>
+        <a href="tel:+966500000000" class="footer-btn">
+            <i class="fas fa-phone-alt"></i>
+            <span id="btn-call">اتصال</span>
+        </a>
+        <a href="mailto:dr.zaid@hospital.ca" class="footer-btn">
+            <i class="fas fa-envelope"></i>
+            <span id="btn-email">بريد</span>
+        </a>
+        <button class="footer-btn" onclick="openModal()">
+            <i class="fas fa-calendar-alt"></i>
+            <span id="btn-hours">المواعيد</span>
+        </button>
+    </footer>
+
+    <script>
+        const translations = {
+            ar: {
+                langBtn: "English",
+                name: "دكتور زيد عبدالله",
+                role: "استشاري أمراض كلى الأطفال",
+                currLoc: "📍 حالياً: المستشفى الحكومي الكندي",
+                s1: "حالة تم علاجها", s2: "عاماً من الخبرة", s3: "الزمالة الكندية",
+                tAbout: "النبذة المهنية", tServices: "مجالات التخصص", tExp: "المسيرة المهنية", tEdu: "الاعتمادات",
+                txtAbout: "استشاري متخصص في طب الأطفال وأمراض كلى الأطفال، حاصل على الزمالة الكندية وبورد التخصص الدقيق. أركز في ممارستي على تشخيص وعلاج اضطرابات الكلى المعقدة لدى الأطفال.",
+                srv1t: "أمراض كلى الأطفال", srv1d: "علاج حالات الفشل الكلوي المزمن، المتلازمة الكلوية، واضطرابات الأملاح.",
+                srv2t: "الغسيل الكلوي", srv2d: "الإشراف الطبي على برامج الديلزة الدموية والبريتونية المخصصة للأطفال.",
+                j1t: "استشاري أمراض كلى الأطفال", j1m: "2019 - الحاضر | المستشفى الحكومي الكندي",
+                j2t: "زميل إكلينيكي", j2m: "2015 - 2019 | جامعة تورنتو - كندا",
+                eduList: "<li>زميل الكلية الملكية للأطباء والجراحين بكندا (FRCPC).</li><li>عضو الجمعية الدولية لأمراض كلى الأطفال (IPNA).</li>",
+                bLoc: "الموقع", bCall: "اتصال", bEmail: "بريد", bHours: "المواعيد",
+                mTitle: "جدول العيادة", mClose: "إغلاق",
+                days: ["السبت", "الأحد", "الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة"],
+                time: "9ص - 4م", closed: "مغلق"
+            },
+            en: {
+                langBtn: "عربي",
+                name: "Dr. Zaid Abdullah",
+                role: "Consultant Pediatric Nephrologist",
+                currLoc: "📍 Currently: Canadian Gov. Hospital",
+                s1: "Cases Treated", s2: "Years Experience", s3: "Canadian Fellow",
+                tAbout: "Professional Summary", tServices: "Specialties", tExp: "Career Journey", tEdu: "Accreditations",
+                txtAbout: "Consultant Pediatrician and Pediatric Nephrologist, Canadian Fellowship holder. Specializing in the diagnosis and treatment of complex renal disorders in children.",
+                srv1t: "Pediatric Nephrology", srv1d: "Management of chronic kidney failure, nephrotic syndrome, and electrolyte disorders.",
+                srv2t: "Pediatric Dialysis", srv2d: "Medical supervision of hemodialysis and peritoneal dialysis for kids.",
+                j1t: "Consultant Ped. Nephrologist", j1m: "2019 - Present | Canadian Gov. Hospital",
+                j2t: "Clinical Fellow", j2m: "2015 - 2019 | University of Toronto",
+                eduList: "<li>Fellow of the Royal College of Physicians of Canada (FRCPC).</li><li>Member of Int. Pediatric Nephrology Association (IPNA).</li>",
+                bLoc: "Location", bCall: "Call", bEmail: "Email", bHours: "Schedule",
+                mTitle: "Clinic Schedule", mClose: "Close",
+                days: ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"],
+                time: "9AM - 4PM", closed: "Closed"
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            const d = translations[currentLang];
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
+            document.getElementById('lang-btn').innerText = d.langBtn;
+            document.getElementById('txt-name').innerText = d.name;
+            document.getElementById('txt-role').innerText = d.role;
+            document.getElementById('txt-curr-loc').innerText = d.currLoc;
+            document.getElementById('lbl-stat1').innerText = d.s1;
+            document.getElementById('lbl-stat2').innerText = d.s2;
+            document.getElementById('lbl-stat3').innerText = d.s3;
+            document.getElementById('title-about').innerText = d.tAbout;
+            document.getElementById('title-services').innerText = d.tServices;
+            document.getElementById('title-exp').innerText = d.tExp;
+            document.getElementById('title-edu').innerText = d.tEdu;
+            document.getElementById('txt-about').innerText = d.txtAbout;
+            document.getElementById('srv1-title').innerText = d.srv1t; document.getElementById('srv1-desc').innerText = d.srv1d;
+            document.getElementById('srv2-title').innerText = d.srv2t; document.getElementById('srv2-desc').innerText = d.srv2d;
+            document.getElementById('job1-title').innerText = d.j1t; document.getElementById('job1-meta').innerText = d.j1m;
+            document.getElementById('job2-title').innerText = d.j2t; document.getElementById('job2-meta').innerText = d.j2m;
+            document.getElementById('list-edu').innerHTML = d.eduList;
+            document.getElementById('btn-loc').innerText = d.bLoc;
+            document.getElementById('btn-call').innerText = d.bCall;
+            document.getElementById('btn-email').innerText = d.bEmail;
+            document.getElementById('btn-hours').innerText = d.bHours;
+            document.getElementById('modal-title').innerText = d.mTitle;
+            document.getElementById('btn-close').innerText = d.mClose;
+        }
+
+        function openModal() {
+            const d = translations[currentLang];
+            const table = document.getElementById('hours-table');
+            let rows = '';
+            d.days.forEach((day, index) => {
+                let status = (index === 6) ? d.closed : d.time;
+                rows += `<tr><td>${day}</td><td>${status}</td></tr>`;
+            });
+            table.innerHTML = rows;
+            document.getElementById('hoursModal').style.display = 'flex';
+        }
+
+        function closeModal() { document.getElementById('hoursModal').style.display = 'none'; }
+        window.onclick = function(e) { if(e.target == document.getElementById('hoursModal')) closeModal(); }
+    </script>
+</body>
+</html>
